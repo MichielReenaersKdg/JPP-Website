@@ -1,5 +1,4 @@
 ﻿using JPP.BL;
-using JPP.Domain;
 using JPP.UI.Web.MVC.Models;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System;

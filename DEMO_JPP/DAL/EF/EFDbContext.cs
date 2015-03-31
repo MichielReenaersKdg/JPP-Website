@@ -7,7 +7,7 @@ using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Data.Entity.Infrastructure.Annotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using JPP.Domain;
+
 
 namespace JPP.DAL.EF
 {
@@ -27,22 +27,22 @@ namespace JPP.DAL.EF
        }
 
 
-        public DbSet<Bericht> berichten { get; set; }
-        public DbSet<Recensie> recensies { get; set; }
-        public DbSet<Contactpersoon> contactpersonen { get; set; }
+        //public DbSet<Bericht> berichten { get; set; }
+        //public DbSet<Recensie> recensies { get; set; }
+        //public DbSet<Contactpersoon> contactpersonen { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
 
             // 'Bericht.Id' as unique identifier
-            modelBuilder.Entity<Bericht>().HasKey(b => b.id);
+            //modelBuilder.Entity<Bericht>().HasKey(b => b.id);
 
             // 'Recensie.Id' as unique identifier
-            modelBuilder.Entity<Recensie>().HasKey(r => r.id);
+            //modelBuilder.Entity<Recensie>().HasKey(r => r.id);
 
             // 'Contactpersoon.Id' as unique identifier
-            modelBuilder.Entity<Contactpersoon>().HasKey(c => c.id);
+            //modelBuilder.Entity<Contactpersoon>().HasKey(c => c.id);
            
         }
     }

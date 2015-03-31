@@ -46,8 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EF\ContactRepository.cs" />
-    <Compile Include="IContactRepository.cs" />
     <Compile Include="EF\EFDbConfiguration.cs" />
     <Compile Include="EF\EFDbContext.cs" />
     <Compile Include="EF\EFDbInitializer.cs" />

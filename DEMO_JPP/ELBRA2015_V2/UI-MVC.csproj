@@ -181,12 +181,9 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
-    <Compile Include="Controllers\BerichtController.cs" />
-    <Compile Include="Controllers\ContactpersoonController.cs" />
     <Compile Include="Controllers\GebruikerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\RecensieController.cs" />
     <Compile Include="Controllers\RolesController.cs" />
     <Compile Include="Extra\Startup.cs" />
     <Compile Include="Global.asax.cs">
@@ -359,7 +356,6 @@
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\websiteAnimation.js" />
-    <Content Include="Video\Presentationjongeren participatie.wmv" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
     <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
@@ -377,9 +373,6 @@
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\_RemoveAccountPartial.cshtml" />
     <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
-    <Content Include="Views\Bericht\Delete.cshtml" />
-    <Content Include="Views\Bericht\Details.cshtml" />
-    <Content Include="Views\Bericht\Index.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
@@ -389,10 +382,6 @@
     <Content Include="Views\Manage\ManageLogins.cshtml" />
     <Content Include="Views\Manage\SetPassword.cshtml" />
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
-    <Content Include="Views\Recensie\Delete.cshtml" />
-    <Content Include="Views\Recensie\Details.cshtml" />
-    <Content Include="Views\Recensie\Edit.cshtml" />
-    <Content Include="Views\Recensie\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -418,9 +407,6 @@
     <Content Include="Video\video.mp4" />
     <Content Include="Views\Shared\_Layout2.cshtml" />
     <Content Include="Views\Home\Diensten.cshtml" />
-    <Content Include="Views\Contactpersoon\Delete.cshtml" />
-    <Content Include="Views\Contactpersoon\Details.cshtml" />
-    <Content Include="Views\Contactpersoon\Index.cshtml" />
     <Content Include="Views\Gebruiker\BlokkeerGebruiker.cshtml" />
     <Content Include="Views\Gebruiker\Index.cshtml" />
     <Content Include="Views\Gebruiker\partialViewGebruikers1.cshtml" />

@@ -40,9 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdminManager.cs" />
-    <Compile Include="ContactManager.cs" />
     <Compile Include="IAdminManager.cs" />
-    <Compile Include="IContactManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
