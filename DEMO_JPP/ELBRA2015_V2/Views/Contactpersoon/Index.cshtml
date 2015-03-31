@@ -1,0 +1,83 @@
+﻿@model PagedList.IPagedList<JPP.Domain.Contactpersoon>
+@using PagedList.Mvc;
+
+@{
+    ViewBag.Title = "Contactpersonen";
+}
+
+@if (User.IsInRole("Admin"))
+{
+    int number = 0;
+    
+    <h2>Contacpersonen</h2>
+
+    <table class="table table-striped">
+        <tr class="success">
+            <th>
+                #
+            </th>
+            <th>
+                Naam
+            </th>
+            <th>
+                Straat
+            </th>
+            <th>
+                Gemeente
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Telefoon Nr.
+            </th>
+            <th>
+                IP-Address
+            </th>
+            <th id="settingsLayout">
+                Instellingen
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            number = number + 1;
+            <tr>
+                <td id="cellFocus">
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.naam)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.straat)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.gemeente)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.telefoonNr)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ipAddress)
+                </td>
+                <td>
+                    @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                    @Html.ActionLink("Verwijder", "Delete", new { id = item.id })
+                </td>
+            </tr>
+
+
+        }
+
+    </table>
+    <br />
+
+    @Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page }))
+    <a href="@Url.Action("Index","Admin")"><img src="~/Images/page icons/goBack2.png" /> Ga terug</a>
+
+}

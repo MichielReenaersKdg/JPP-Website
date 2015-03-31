@@ -1,0 +1,100 @@
+﻿
+@model PagedList.IPagedList<JPP.Domain.Recensie>
+@using PagedList.Mvc;
+
+@{
+    ViewBag.Title = "Recensies";
+}
+@if (Request.IsAuthenticated)
+{
+    <h2>Recensies</h2>
+
+    <table class="table table-striped">
+        <tr class="success">
+            <th>
+                Id
+            </th>
+            <th>
+                Naam
+            </th>
+            <th>
+                Titel
+            </th>
+            <th>
+                Inhoud
+            </th>
+            <th>
+                Datum
+            </th>
+            <th>
+                Rating
+            </th>
+            <th>
+                Gemeente
+            </th>
+            <th>
+                Status
+            </th>
+            <th id="settingsLayout">
+                Instellingen
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td class="tr" id="cellFocus">
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+                <td class="tr">
+                    @Html.DisplayFor(modelItem => item.naam)
+                </td>
+                <td class="tr">
+                    @Html.DisplayFor(modelItem => item.titel)
+                </td>
+                <td class="tr">
+                    @Html.DisplayFor(modelItem => item.tekst)
+                </td>
+                <td class="tr">
+                    @Html.DisplayFor(modelItem => item.datumPost)
+                </td>
+                <td class="tr">
+                    @Html.DisplayFor(modelItem => item.rating)
+                </td>
+                <td class="tr">
+                    @Html.DisplayFor(modelItem => item.gemeente)
+                </td>
+                <td class="tr">
+                    @Html.DisplayFor(modelItem => item.status)
+                </td>
+                <td class="tr">
+                    @if (User.IsInRole("Admin") || User.IsInRole("Moderator"))
+                    {
+                        @Html.ActionLink("Wijzig", "Edit", new { id = item.id })
+
+                    }
+
+                    @if (User.IsInRole("Admin"))
+                    {
+
+                        @Html.ActionLink("Verwijder", "Delete", new { id = item.id })
+                    }
+
+                    @Html.ActionLink("Details", "Details", new { id = item.id })
+
+                </td>
+            </tr>
+        }
+
+    </table>
+    <br />
+
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page }))
+    
+    <a href="@Url.Action("Index", "Home")"><img src="~/Images/page icons/goBack2.png" alt="ga terug"/></a>
+
+
+}
+
