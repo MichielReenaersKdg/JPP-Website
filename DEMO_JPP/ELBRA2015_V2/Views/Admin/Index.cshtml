@@ -1,0 +1,28 @@
+﻿@model JPP.UI.Web.MVC.Models.User
+
+@if (User.IsInRole("Admin"))
+{
+    <div class="col-md-4 centraal"> 
+        <h2>Logins (Beta)</h2>
+       <a href="#"><img src="~/Images/menu logos/loginsLogo.png"></a>
+    </div>
+
+
+    <div class="col-md-4 centraal">
+        <h2>Contact</h2>
+        <a href="@Url.Action("Index", "Contactpersoon")"><img src="~/Images/menu logos/contactpersonenLogo.png"></a>
+    </div>
+
+    <div class="col-md-4 centraal">
+        <h2>Gebruikers</h2>
+        <a href="@Url.Action("Index", "Gebruiker")"><img src="~/Images/menu logos/gebruikersLogo.png"></a>
+    </div>
+
+    <div class="col-md-4 centraal">
+        <h2>Roles</h2>
+       <a href="@Url.Action("Index", "Roles")"><img src="~/Images/menu logos/rolesLogo.png"></a>
+    </div>
+    
+
+
+}
