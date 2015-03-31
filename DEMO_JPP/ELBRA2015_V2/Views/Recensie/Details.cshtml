@@ -1,0 +1,84 @@
+﻿@model JPP.Domain.Recensie
+
+@{
+    ViewBag.Title = "Recensie details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Recensie</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+           Naam
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.naam)
+        </dd>
+
+        <dt>
+           Titel
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.titel)
+        </dd>
+
+        <dt>
+            Inhoud
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tekst)
+        </dd>
+
+        <dt>
+            Datum
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.datumPost)
+        </dd>
+
+        <dt>
+            Rating
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rating)
+        </dd>
+
+        <dt>
+            Gemeente
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gemeente)
+        </dd>
+
+        <dt>
+            Status
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.status)
+        </dd>
+
+        <dt>
+            IP Address
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ipAddress)
+        </dd>
+
+    </dl>
+</div>
+<p>
+
+
+    <span class="btn btn-default">@Html.ActionLink("Wijzig", "Edit", new { id = Model.id })</span> |
+    @Html.ActionLink("Ga terug", "Index")
+</p>
